@@ -1,0 +1,119 @@
+syntax = "proto3";
+package communication;
+option go_package = "./proto";
+
+message BlockRequest{
+  int64 Index = 1;
+  int64 Timestamp = 2;
+  bytes Hash = 3;
+  bytes PrevHash = 4;
+  int64 Difficulty = 5;
+  bytes Target = 6;
+  int64 Nonce = 7 ;
+  string Creator = 8;
+}
+
+message BlockResponse{
+  string BR = 1;
+}
+
+message TransactionsRequest{
+  bytes BelongHash = 1;  //记录属于哪个Block
+  bytes ID = 2;
+  int64 Fee = 3;
+  bool type = 4;
+  string From = 5;
+  string To = 6;
+  int64 Amount = 7;
+}
+
+message TxsResponse{
+  string TR = 1;
+}
+
+message InputsRequest{
+  bytes BelongId = 1;  //记录属于哪个交易
+  int64 Index =2;   //交易的第几个Inputs
+  bytes TxID = 3;
+  int64 OutIdx = 4;
+  bytes PubKey = 5;
+  bytes Sig = 6;
+}
+
+message InputsResponse{
+  string IR = 1;
+}
+
+message OutputsRequest{
+  bytes BelongId = 1;  //记录属于哪个交易
+  int64 Index = 2; //交易的第几个Outputs
+  int64 Value = 3;
+  bytes HashPubKey = 4;
+}
+
+message OutputsResponse{
+  string OR = 1;
+}
+
+message EndRequest{
+  bool end_flag = 1;
+}
+
+message EndResponse{
+  string ER = 1;
+}
+
+message CreateByRequest{
+  string name = 1;
+}
+
+message CreateByResponse{
+  string WR = 1;
+}
+
+message GetBlockRequest{
+  int64 height = 1;  //结点存储区块链的高度
+  string address = 2; //本结点地址
+}
+
+message GetBlockResponse{
+  string GR = 1;
+}
+
+message AliveRequest{
+  string Hello = 1;
+}
+
+message AliveResponse{
+  string Hi = 1;
+}
+
+message AssetRequest{
+  int64 coins = 1;
+  string walletAddress = 2;
+}
+
+message AssetResponse{
+  string AR = 1;
+}
+
+service BlockchainService{
+  //用于广播块、交易、交易输入、交易输出和创世区块生成者
+  rpc Block (BlockRequest) returns (BlockResponse);
+  rpc Transactions (stream TransactionsRequest) returns (TxsResponse);
+  rpc Inputs(stream InputsRequest) returns (InputsResponse);
+  rpc Outputs (stream OutputsRequest) returns (OutputsResponse);
+  rpc End(EndRequest) returns (EndResponse);
+  rpc CreateBy(CreateByRequest) returns (CreateByResponse);
+  //用于请求获得所有块
+  rpc GetBlock(GetBlockRequest) returns (CreateByResponse);
+  //用于广播新交易
+  rpc NewTransaction (TransactionsRequest) returns (TxsResponse);
+  rpc NewOutPuts(stream OutputsRequest) returns (OutputsResponse);
+  rpc NewInPuts(stream InputsRequest) returns (InputsResponse);
+  rpc NewEnd(EndRequest) returns (EndResponse);
+  //用于探询结点是否在线
+  rpc Alive(AliveRequest) returns (AliveResponse);
+  //广播B币
+  rpc Asset(AssetRequest)returns (AssetResponse);
+}

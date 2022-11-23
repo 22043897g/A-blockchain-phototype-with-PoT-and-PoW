@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$/Miner1/go-callvis" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Miner10/go-callvis" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Miner2/go-callvis" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Miner3/go-callvis" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Miner4/go-callvis" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Miner5/go-callvis" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Miner6/go-callvis" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Miner7/go-callvis" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Miner8/go-callvis" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Miner9/go-callvis" vcs="Git" />
+  </component>
+</project>

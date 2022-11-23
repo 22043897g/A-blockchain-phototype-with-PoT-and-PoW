@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+
+
+<head>
+
+  <!-- Required meta tags -->
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+  <!-- Bootstrap CSS -->
+
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/inner-bootstrap.min.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/inner-fontawesome.min.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/inner-magnific-popup.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/inner-meanmenu.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/inner-slick.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/inner-default.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/inner-main.css') }}">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'css/inner-responsive.css') }}">
+
+
+
+  <title>BlockChain - Personal Portfolio</title>
+
+</head>
+
+
+
+<body>
+<style type="text/css">
+  p label{
+    font-size: 40px;
+    color: #904b06;
+  }
+  p input {
+    width: 600px;
+    height: 50px;
+  }
+
+</style>
+
+
+  <!-- header start -->
+
+  <header>
+
+    <div id="header-sticky" class="header-area pt-25 pb-20" style="background-color: #9fcdff;background-image: linear-gradient(to right, #9fcdff,#0f6674)">
+<!--    <div id="colorchange" class="header-area pt-25 pb-20" style="background-color: #9fcdff">-->
+
+      <div class="container-fluid">
+
+        <div class="row">
+
+          <div class="col-md-2 col-xl-2 col-lg-2">
+
+            <div class="logo">
+
+              <a href="/"> <img src="{{ url_for('static', filename = 'img/inner-logo.png') }}" alt="" width="230" height="90"> </a>
+
+            </div>
+
+          </div>
+
+          <div class="col-xl-5 col-lg-7 col-md-2">
+
+            <div class="main-menu text-center">
+
+              <nav id="mobile-menu">
+
+                <ul>
+
+                  <li ><a href="/">Home</a></li>
+<!--                  <li><a href="/registernode">RegisterNode</a></li>-->
+<!--                  <li><a href="/getnode">GetNode</a></li>-->
+                  <li><a href="/transactiondisplay">POTDisplay</a></li>
+<!--                  <li><a href="/transactioncreate">TxCreate</a></li-->
+                  <li><a href="/transactionsearch">POTSearch</a></li>
+                  <li><a href="/processDisplay">POTProcess</a></li>
+<!--                  <li><a href="/chaindisplay">ChainDisplay</a></li>-->
+<!--                  <li><a href="/index-5">index-5</a></li>-->
+                  <li class="active"><a href="/index-6">START</a></li>
+
+<!--                  <li><a href="#team">Team</a></li>-->
+
+<!--                  <li><a href="#blog">News</a></li>-->
+
+                </ul>
+
+              </nav>
+
+            </div>
+
+          </div>
+
+          <div class="col-xl-5 col-lg-3 col-md-5 d-none d-lg-block">
+
+<!--            <div class="header-top-btn f-right  d-none d-md-block">-->
+
+<!--              <a href="#" class="btn header-btn">Get A Quote</a>-->
+
+<!--            </div>-->
+
+          </div>
+
+          <div class="col-12">
+
+            <div class="mobile-menu"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- header end -->
+
+  <main>
+
+    <!-- slider-area start -->
+
+<!--    <section id="home" class="slider-area mb-100">-->
+
+<!--      <div class="hero-bg-img slider-height" data-background="img/slider_bg-img.jpg">-->
+
+<!--        <div class="container-fluid">-->
+
+<!--          <div class="row">-->
+
+<!--            <div class="col-xl-7 col-lg-7 col-md-12">-->
+
+<!--              <div class="slider-text slider-content-space">-->
+
+<!--                <h5>Based On Netherland</h5>-->
+
+<!--                <h2>I am Creative <span>Designer</span></h2>-->
+
+<!--                <p>-->
+
+<!--                  I Provide UX Design Service. Don’t worry about your product. I-->
+
+<!--                  can take care & can handle your project very easily with my-->
+
+<!--                  process.-->
+
+<!--                </p>-->
+
+<!--                <div class="slider-btn">-->
+
+<!--                  <a class="btn btn-line" href="#"><span></span>My Services</a>-->
+
+<!--                  <a class="btn btn-border line-btn" href="#">Learn More</a>-->
+
+
+
+<!--                </div>-->
+
+<!--              </div>-->
+
+<!--            </div>-->
+
+<!--            <div class="col-xl-5 col-lg-5 d-none d-xl-block">-->
+
+<!--              <div class="single-slider slider-actives">-->
+
+<!--                <div class="slider-img">-->
+
+<!--                  <img src="static/picture/banner-man-img.png" alt="">-->
+
+<!--                </div>-->
+
+<!--              </div>-->
+
+<!--            </div>-->
+
+<!--          </div>-->
+
+<!--        </div>-->
+
+<!--      </div>-->
+
+<!--    </section>-->
+
+    <!-- slider-area end -->
+
+<!--    <section class="brand-area pt-130 ">-->
+
+<!--      <div class="container-fluid">-->
+
+<!--        <div class="row brand-active">-->
+
+<!--          <div class="col-12">-->
+
+<!--            <div class="single-brand">-->
+
+<!--              <img src="static/picture/brand2.jpg" alt="">-->
+
+<!--            </div>-->
+
+<!--          </div>-->
+
+<!--          <div class="col-12">-->
+
+<!--            <div class="single-brand">-->
+
+<!--              <img src="static/picture/brand3.jpg" alt="">-->
+
+<!--            </div>-->
+
+<!--          </div>-->
+
+<!--          <div class="col-12">-->
+
+<!--            <div class="single-brand">-->
+
+<!--              <img src="static/picture/brand1.jpg" alt="">-->
+
+<!--            </div>-->
+
+<!--          </div>-->
+
+<!--          <div class="col-12">-->
+
+<!--            <div class="single-brand">-->
+
+<!--              <img src="static/picture/brand4.jpg" alt="">-->
+
+<!--            </div>-->
+
+<!--          </div>-->
+
+<!--          <div class="col-12">-->
+
+<!--            <div class="single-brand">-->
+
+<!--              <img src="static/picture/brand5.jpg" alt="">-->
+
+<!--            </div>-->
+
+<!--          </div>-->
+
+<!--          <div class="col-12">-->
+
+<!--            <div class="single-brand">-->
+
+<!--              <img src="static/picture/brand6.jpg" alt="">-->
+
+<!--            </div>-->
+
+<!--          </div>-->
+
+<!--          <div class="col-12">-->
+
+<!--            <div class="single-brand">-->
+
+<!--              <img src="static/picture/brand5.jpg" alt="">-->
+
+<!--            </div>-->
+
+<!--          </div>-->
+
+<!--          <div class="col-12">-->
+
+<!--            <div class="single-brand">-->
+
+<!--              <img src="static/picture/brand5.jpg" alt="">-->
+
+<!--            </div>-->
+
+<!--          </div>-->
+
+<!--          <div class="col-12">-->
+
+<!--            <div class="single-brand">-->
+
+<!--              <img src="static/picture/brand5.jpg" alt="">-->
+
+<!--            </div>-->
+
+<!--          </div>-->
+
+<!--          <div class="col-12">-->
+
+<!--            <div class="single-brand">-->
+
+<!--              <img src="static/picture/brand5.jpg" alt="">-->
+
+<!--            </div>-->
+
+<!--          </div>-->
+
+<!--        </div>-->
+
+<!--      </div>-->
+
+<!--    </section>-->
+
+    <!-- fact-area -->
+
+<!--    <section id="about" class="work-eaperience-area pt-120 pb-145">-->
+
+<!--      <div class="container">-->
+
+<!--        <div class="row">-->
+
+<!--          <div class="col-xl-6 col-lg-6 col-md-12">-->
+
+<!--            <div class="owner-img position-relative">-->
+
+<!--              <img src="static/picture/service-img.png" alt="">-->
+
+<!--              <a class="owner-icon popup-video" href="javascript:;"><i class="fa fa-play"></i></a>-->
+
+<!--            </div>-->
+
+<!--          </div>-->
+
+<!--          <div class="col-xl-6 col-lg-6 col-md-12">-->
+
+<!--            <div class="total-expraince-area">-->
+
+<!--              <div class="my-exp-info">-->
+
+<!--                <div class="my-exp-title">-->
+
+<!--                  <h5>10+ Years Of Experience</h5>-->
+
+<!--                  <h2>-->
+
+<!--                    I’m Experience <br>-->
+
+<!--                    <span>In Visual LoL</span>-->
+
+<!--                  </h2>-->
+
+<!--                </div>-->
+
+<!--                <hr>-->
+
+<!--              </div>-->
+
+<!--              <div class="exp-detels">-->
+
+<!--                <ul>-->
+
+<!--                  <li><span>Age</span> <p>24 Years</p></li>-->
+
+<!--                  <li><span>Availibility</span> <p>Freelance</p></li>-->
+
+<!--                  <li><span>Phone</span> <p>897 (786) 56 78</p></li>-->
+
+<!--                  <li><span>Country</span>-->
+
+<!--                    <p>USA</p>-->
+
+<!--                  </li>-->
+
+<!--                  <li><span>City</span>-->
+
+<!--                    <p>New York</p>-->
+
+<!--                  </li>-->
+
+<!--                  <li><span>Email</span>-->
+
+<!--                    <p><a href="email-protection.html" class="__cf_email__" data-cfemail="50193e363f102735323d31393c7e333f3d">[email&#160;protected]</a></p>-->
+
+<!--                  </li>-->
+
+<!--                </ul>-->
+
+<!--              </div>-->
+
+<!--            </div>-->
+
+<!--          </div>-->
+
+<!--        </div>-->
+
+<!--      </div>-->
+
+<!--    </section>-->
+
+    <!-- service-area -->
+
+    <!-- service area start -->
+
+<!--    &lt;!&ndash; counter area &ndash;&gt;-->
+
+    <!-- counter area end -->
+
+    <!-- portfolio area -->
+
+    <section id="project" class="portfolio-area pt-160 pb-120">
+
+      <div class="container">
+        <div class="row">
+
+          <div class="col-xl-8 offset-xl-2">
+
+            <div class="section-title text-center mb-35">
+
+              <div class="section-pre-titles">
+
+                <h2>Start</h2>
+
+              </div>
+
+              <div class="section-title-content">
+
+                <span>START</span>
+
+                <h2>One-touch start button</h2>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="portiolio-list-area">
+
+          <ul>
+            <li>
+
+              <div class="pt-wrp">
+
+
+                <div class="row">
+                    <div >
+                       <form action="/MineStarting" method="post" >
+<!--                          <p><label>address : </label>-->
+<!--                         <input class="form-control mr-sm-2" type="text" name="add"   placeholder="input address,  e.g:0x37242462462242324"></br>-->
+<!--                            <label>name :    </label>-->
+<!--                         <input class="form-control mr-sm-2" type="text" name="name"   placeholder="input name,  e.g:aaaaaaaaaa">-->
+                          <input type="submit" name="submit" value="Click to Start" class="btn btn-success"><br></p>
+                       </form>
+<!--                      <a class="btn btn-line btn-lenth" href="#"><span></span>Case Study</a>-->
+
+                    </div>
+
+
+
+                </div>
+
+              </div>
+
+            </li>
+            <li>
+                    <div>
+                      <p>result is {{ data }} </p>
+                    </div>
+            </li>
+<!--            <li>-->
+
+<!--              <div class="pt-wrp active">-->
+
+<!--                <div class="protfolio-bg-img" style="background-image: url(static/image/portfolio-img.jpg);"></div>-->
+
+<!--                <div class="row">-->
+
+<!--                  <div class="col-xl-6 col-lg-7 col-md-8">-->
+
+<!--                    <div class="portfolio-list">-->
+
+<!--                      <div class="sinlge-porfilio">-->
+
+<!--                        <div class="portfilio-title">-->
+
+<!--                          <span>Web Development</span>-->
+
+<!--                          <h2>Romada Perankilo</h2>-->
+
+<!--                        </div>-->
+
+<!--                      </div>-->
+
+<!--                    </div>-->
+
+<!--                  </div>-->
+
+<!--                  <div class="col-xl-3 col-lg-2 offset-xl-3 offset-lg-2 col-md-3">-->
+
+<!--                    <div class="portfolio-btn text-right">-->
+
+<!--                      <a class="btn btn-line btn-lenth" href="#"><span></span>Case Study</a>-->
+
+<!--                    </div>-->
+
+<!--                  </div>-->
+
+<!--                </div>-->
+
+<!--              </div>-->
+
+<!--            </li>-->
+
+<!--            <li>-->
+
+<!--              <div class="pt-wrp">-->
+
+<!--                <div class="protfolio-bg-img" style="background-image: url(static/image/portfolio-img.jpg);"></div>-->
+
+<!--                <div class="row">-->
+
+<!--                  <div class="col-xl-6 col-lg-7 col-md-8">-->
+
+<!--                    <div class="portfolio-list">-->
+
+<!--                      <div class="sinlge-porfilio">-->
+
+<!--                        <div class="portfilio-title">-->
+
+<!--                          <span>Web Development</span>-->
+
+<!--                          <h2>Romada Perankilo</h2>-->
+
+<!--                        </div>-->
+
+<!--                      </div>-->
+
+<!--                    </div>-->
+
+<!--                  </div>-->
+
+<!--                  <div class="col-xl-3 col-lg-2 offset-xl-3 offset-lg-2 col-md-3">-->
+
+<!--                    <div class="portfolio-btn text-right">-->
+
+
+
+<!--                      <a class="btn btn-line btn-lenth" href="#"><span></span>Services</a>-->
+
+<!--                    </div>-->
+
+<!--                  </div>-->
+
+<!--                </div>-->
+
+<!--              </div>-->
+
+<!--            </li>-->
+
+          </ul>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!--posrtfolio area end -->
+
+
+
+    <!-- work-prosses area -->
+
+    <section class="work-pross-area pt-160 pb-85">
+
+      <div class="container">
+
+        <div class="row ">
+
+          <div class="col-xl-8 offset-xl-2">
+
+            <div class="section-title text-center mb-35">
+
+              <div class="section-pre-titles titles-color">
+
+                <h2>Process</h2>
+
+              </div>
+
+              <div class="section-title-content">
+
+                <span>process</span>
+
+                <h2 class="titles-white">Work Process</h2>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="row prs-pareent">
+
+          <div class="col-xl-3 col-lg-3 col-md-6">
+
+            <div class="single-work-pros text-center mb-30">
+
+              <div class="single-work-icon mb-30">
+
+                <i class="fal fa-users"></i>
+
+              </div>
+
+              <h3>Discussion</h3>
+
+            </div>
+
+          </div>
+
+          <div class="col-xl-3 col-lg-3 col-md-6">
+
+            <div class="single-work-pros text-center mb-30">
+
+              <div class="single-work-icon w-b mb-30">
+
+                <i class="fal fa-edit"></i>
+
+              </div>
+
+              <h3>Sketch & Design</h3>
+
+            </div>
+
+          </div>
+
+          <div class="col-xl-3 col-lg-3 col-md-6">
+
+            <div class="single-work-pros text-center mb-30">
+
+              <div class="single-work-icon w-c mb-30">
+
+                <i class="fal fa-code"></i>
+
+              </div>
+
+              <h3>Coding</h3>
+
+            </div>
+
+          </div>
+
+          <div class="col-xl-3 col-lg-3 col-md-6">
+
+            <div class="single-work-pros text-center mb-30">
+
+              <div class="single-work-icon w-d mb-30">
+
+                <i class="fal fa-box"></i>
+
+              </div>
+
+              <h3>Live Product</h3>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- work-prosses area end -->
+
+    <!-- Testimonials-area -->
+    <!-- Testimonials-area end -->
+
+    <!-- blog area -->
+
+
+    <!-- blog area end -->
+
+    <!-- cta area -->
+
+    <section class="cta-area pt-85 pb-85">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-xl-2 col-lg-2 col-md-2">
+
+            <div class="cta-area-img">
+
+               <img src="{{ url_for('static', filename = 'img/inner-logo.png') }}" alt="">
+
+            </div>
+
+          </div>
+
+          <div class="col-xl-6 offset-xl-4 col-lg-6 offset-lg-4 col-md-7 offset-md-3">
+
+            <div class="cta-form">
+
+              <form action="#">
+
+                <input type="email" placeholder="Enter your email address">
+
+                <button type="submit" class="btn btn-form">
+
+                  <i class="fal fa-envelope"></i>Subscribe
+
+                </button>
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- cta area-end -->
+
+  </main>
+
+  <footer>
+
+    <section class="footer-area pt-35 pb-35">
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-xl-6 col-lg-6 col-md-6">
+
+            <div class="footer-social-link">
+
+              <ul>
+
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+
+                <li><a href="#"><i class="fab fa-behance"></i></a></li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+          <div class="col-xl-6 col-lg-6  col-md-6">
+
+            <div class="footer-text text-right pt-10">
+
+              <p>Copyright &copy; 2022.Company name All rights reserved.</p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </footer>
+
+
+
+  <!-- js here -->
+
+  <script data-cfasync="false" src="{{ url_for('static', filename = 'js/inner-email-decode.min.js') }}"></script><script src="{{ url_for('static', filename = 'js/inner-jquery-1.12.4.min.js') }}"></script>
+
+  <script src="{{ url_for('static', filename = 'js/inner-popper.min.js') }}"></script>
+
+  <script src="{{ url_for('static', filename = 'js/inner-bootstrap.min.js') }}"></script>
+
+  <script src="{{ url_for('static', filename = 'js/inner-waypoints.min.js') }}"></script>
+
+  <script src="{{ url_for('static', filename = 'js/inner-jquery.counterup.min.js') }}"></script>
+
+  <script src="{{ url_for('static', filename = 'js/inner-jquery.magnific-popup.min.js') }}"></script>
+
+  <script src="{{ url_for('static', filename = 'js/inner-slick.min.js') }}"></script>
+
+  <script src="{{ url_for('static', filename = 'js/inner-one-page-nav-min.js') }}"></script>
+
+  <script src="{{ url_for('static', filename = 'js/inner-jquery.appear.js') }}"></script>
+
+  <script src="{{ url_for('static', filename = 'js/inner-jquery.knob.js') }}"></script>
+
+  <script src="{{ url_for('static', filename = 'js/inner-jquery.meanmenu.min.js') }}"></script>
+
+  <script src="{{ url_for('static', filename = 'js/inner-main.js') }}"></script>
+
+</body>
+
+
+
+</html>
